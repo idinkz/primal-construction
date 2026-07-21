@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #dedede;
+  --foreground: #000000;
+  --muted: #6b6b6b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-roboto);
+  --font-serif: var(--font-cormorant);
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-cormorant), Times, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-nav {
+  font-family: var(--font-roboto), Arial, sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.font-caption {
+  font-family: var(--font-roboto), Arial, sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.wordmark {
+  font-family: var(--font-roboto), Arial, sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 0.28em;
+  line-height: 1.25;
+  color: #1a1a1a;
+}
+
+.serif-title {
+  font-family: var(--font-cormorant), Times, serif;
+  font-weight: 400;
+  font-style: italic;
+}
