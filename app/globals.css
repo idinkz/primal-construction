@@ -16,9 +16,11 @@
   --breakpoint-lg: 1024px;
 }
 
-html,
-body {
+html {
   background: var(--background);
+}
+
+body {
   color: var(--foreground);
 }
 

@@ -8,6 +8,7 @@ import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const pathname = usePathname();
+  const isHome = pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -29,6 +30,11 @@ export default function Header() {
             href="/"
             className="wordmark pointer-events-auto inline-block select-none text-center leading-tight"
             aria-label={BRAND.full}
+            style={
+              isHome
+                ? { color: "#ffffff", textShadow: "0 1px 10px rgba(0,0,0,0.45)" }
+                : undefined
+            }
           >
             <span className="block">{BRAND.line1}</span>
             <span
@@ -51,7 +57,12 @@ export default function Header() {
                       href={link.href}
                       className={`font-nav transition-opacity hover:opacity-100 ${
                         active ? "opacity-100" : "opacity-70"
-                      }`}
+                      } ${isHome ? "text-white" : ""}`}
+                      style={
+                        isHome
+                          ? { textShadow: "0 1px 6px rgba(0,0,0,0.45)" }
+                          : undefined
+                      }
                     >
                       {link.label}
                     </Link>
@@ -69,14 +80,14 @@ export default function Header() {
             className="pointer-events-auto relative h-8 w-8 md:hidden"
           >
             <span
-              className={`absolute left-1 right-1 top-[12px] h-px bg-black transition-transform ${
-                menuOpen ? "translate-y-[3px] rotate-45" : ""
-              }`}
+              className={`absolute left-1 right-1 top-[12px] h-px transition-transform ${
+                isHome && !menuOpen ? "bg-white" : "bg-black"
+              } ${menuOpen ? "translate-y-[3px] rotate-45" : ""}`}
             />
             <span
-              className={`absolute left-1 right-1 top-[18px] h-px bg-black transition-transform ${
-                menuOpen ? "-translate-y-[3px] -rotate-45" : ""
-              }`}
+              className={`absolute left-1 right-1 top-[18px] h-px transition-transform ${
+                isHome && !menuOpen ? "bg-white" : "bg-black"
+              } ${menuOpen ? "-translate-y-[3px] -rotate-45" : ""}`}
             />
           </button>
         </div>

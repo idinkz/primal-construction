@@ -31,18 +31,24 @@ export default function ScatteredGrid({ items }: Props) {
           columnGap: "32px",
         }}
       >
-        {items.map(({ card, href }) => (
-          <div
-            key={card.slug}
-            style={{
-              gridColumn: `${card.placement.colStart} / span ${card.placement.colSpan}`,
-              gridRowStart: card.placement.rowOffset + 1,
-              gridRowEnd: "span 12",
-            }}
-          >
-            <ProjectCard card={card} href={href} />
-          </div>
-        ))}
+        {items.map(({ card, href }) => {
+          // Card height scales with column width (4:3 image + caption), so the
+          // row span must scale with colSpan too, or wide cards overflow their
+          // allocated rows and throw off the grid container's total height.
+          const rowSpan = Math.ceil(card.placement.colSpan * 2.3);
+          return (
+            <div
+              key={card.slug}
+              style={{
+                gridColumn: `${card.placement.colStart} / span ${card.placement.colSpan}`,
+                gridRowStart: card.placement.rowOffset + 1,
+                gridRowEnd: `span ${rowSpan}`,
+              }}
+            >
+              <ProjectCard card={card} href={href} />
+            </div>
+          );
+        })}
       </div>
     </>
   );

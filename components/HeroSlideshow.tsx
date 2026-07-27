@@ -39,6 +39,14 @@ export default function HeroSlideshow({ images, intervalMs = 6000 }: Props) {
           />
         </div>
       ))}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-56 bg-gradient-to-b from-black/60 via-black/15 to-transparent md:h-72"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/45 to-transparent"
+      />
     </div>
   );
 }
