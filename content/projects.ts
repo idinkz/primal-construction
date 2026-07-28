@@ -1,6 +1,77 @@
 import type { Project } from "./types";
 
+// Ordered newest first — the grid reads as a descent back through the firm's
+// work, closing on the 2016 house that started it.
 export const projects: Project[] = [
+  {
+    slug: "nelson-house-3",
+    name: "2276 Nelson",
+    label: "2026",
+    year: 2026,
+    location: "West Vancouver",
+    thumb: "/images/projects/nelson-house-3/01.jpeg",
+    thumbAlt: "2276 Nelson — front elevation and entry",
+    placement: { colStart: 1, colSpan: 7, band: 1 },
+    hasDetail: true,
+    description: [
+      "This residence was designed around the idea that luxury should feel warm, effortless, and lived in. Natural wood ceilings, expansive glazing, and seamless indoor-outdoor living create an inviting atmosphere, while a custom Italian kitchen anchors the home with understated sophistication. Carefully integrated millwork, architectural lighting, and handcrafted finishes come together to create a residence that is contemporary in design, timeless in character, and built for everyday living.",
+    ],
+    detailImages: [
+      { src: "/images/projects/nelson-house-3/01.jpeg", alt: "2276 Nelson — front elevation and entry" },
+      { src: "/images/projects/nelson-house-3/02.jpg", alt: "2276 Nelson — double-height entry with floating stair" },
+      { src: "/images/projects/nelson-house-3/03.jpg", alt: "2276 Nelson — great room window wall with ocean view" },
+      { src: "/images/projects/nelson-house-3/04.jpg", alt: "2276 Nelson — twilight kitchen with floor-to-ceiling windows" },
+      { src: "/images/projects/nelson-house-3/05.jpg", alt: "2276 Nelson — kitchen island with illuminated glass storage" },
+      { src: "/images/projects/nelson-house-3/06.jpg", alt: "2276 Nelson — kitchen with ocean-view windows" },
+      { src: "/images/projects/nelson-house-3/07.jpg", alt: "2276 Nelson — butler's pantry with book-matched marble wall" },
+    ],
+  },
+  {
+    slug: "nelson-house-2",
+    name: "Nelson House 2",
+    label: "2024",
+    year: 2024,
+    location: "West Vancouver",
+    thumb: "/images/projects/nelson-house-2/01.jpg",
+    thumbAlt: "Nelson House 2 — front elevation on sloped lot with stone retaining walls",
+    placement: { colStart: 9, colSpan: 4, band: 1, drop: 40 },
+    hasDetail: true,
+    description: [
+      "Designed and built on a challenging sloped lot, this custom luxury residence was carefully engineered to maximize both functionality and panoramic outlooks while seamlessly integrating into the natural topography. The homeowners envisioned a timeless contemporary home with generous living spaces, refined finishes, and effortless accessibility for every stage of life.",
+      "A private residential elevator connects all levels of the home, while a fully detached coach house provides exceptional flexibility for extended family, guests, or rental income. Expansive floor-to-ceiling glazing, oversized covered terraces, and clean architectural lines create a seamless connection between indoor and outdoor living, allowing natural light to flood the home throughout the day.",
+      "The exterior combines modern architectural forms with warm natural materials, while the interior is thoughtfully designed with open-concept living areas, premium finishes, and carefully crafted details that balance luxury with everyday comfort. From complex site preparation and structural retaining walls to the integration of the elevator and detached coach house, this project showcases our ability to deliver sophisticated homes where architectural vision and construction expertise come together.",
+    ],
+    detailImages: [
+      { src: "/images/projects/nelson-house-2/01.jpg", alt: "Nelson House 2 — front elevation on sloped lot with stone retaining walls" },
+      { src: "/images/projects/nelson-house-2/02.jpeg", alt: "Nelson House 2 — terraced entry stairs and stone retaining walls" },
+    ],
+  },
+  {
+    slug: "jefferson-house",
+    name: "Jefferson House",
+    label: "2023",
+    year: 2023,
+    location: "West Vancouver",
+    thumb: "/images/projects/jefferson-house/01.jpeg",
+    thumbAlt: "Jefferson House — front exterior with landscaped entry",
+    placement: { colStart: 1, colSpan: 4, band: 2, drop: 34 },
+    hasDetail: true,
+    description: [
+      "Built on a rare flat lot, this custom residence was designed around the client's vision of clean, contemporary architecture with warm, inviting interiors. The goal was to create a home that feels both striking and comfortable—where minimalist design is balanced by natural materials and timeless finishes.",
+      "The exterior features bold horizontal rooflines, oversized overhangs, and a sophisticated mix of architectural panels, wood accents, and expansive glazing, creating a modern presence while maintaining warmth and elegance.",
+      "Inside, the home is defined by bright, open-concept living spaces, a dramatic floating staircase, custom millwork, and thoughtfully integrated lighting throughout. A refined palette of natural oak, matte black cabinetry, large-format porcelain tile, and seamless indoor-outdoor connections gives the home a calm, luxurious atmosphere that feels effortlessly livable.",
+      "Every detail was carefully considered to achieve a timeless modern aesthetic—delivering a home that is as functional for everyday family living as it is impressive for entertaining.",
+    ],
+    detailImages: [
+      { src: "/images/projects/jefferson-house/01.jpeg", alt: "Jefferson House — front exterior with landscaped entry" },
+      { src: "/images/projects/jefferson-house/02.jpeg", alt: "Jefferson House — floating staircase and double-height entry" },
+      { src: "/images/projects/jefferson-house/03.jpeg", alt: "Jefferson House — dining area beneath the open stairwell" },
+      { src: "/images/projects/jefferson-house/04.jpeg", alt: "Jefferson House — living and dining area with floor-to-ceiling window" },
+      { src: "/images/projects/jefferson-house/05.jpeg", alt: "Jefferson House — open-concept living area toward kitchen" },
+      { src: "/images/projects/jefferson-house/06.jpeg", alt: "Jefferson House — kitchen island with pendant lighting" },
+      { src: "/images/projects/jefferson-house/07.jpeg", alt: "Jefferson House — bedroom with soft textured linens" },
+    ],
+  },
   {
     slug: "duchess-house",
     name: "Duchess House",
@@ -10,7 +81,7 @@ export const projects: Project[] = [
     sqft: "3,056 ft²",
     thumb: "/images/projects/duchess-house/01.jpg",
     thumbAlt: "Duchess House — twilight front elevation",
-    placement: { colStart: 1, colSpan: 7, rowOffset: 0 },
+    placement: { colStart: 6, colSpan: 7, band: 2 },
     hasDetail: true,
     description: [
       "Duchess House is a testament to intelligent design and precision craftsmanship. Built on a compact lot with challenging setbacks, this custom home maximizes every square foot through thoughtful planning, seamless indoor-outdoor living, and refined contemporary architecture. The result is a residence that feels remarkably spacious, blending clean modern design, premium finishes, and exceptional functionality into a home that proves luxury is defined by design—not size.",
@@ -35,7 +106,7 @@ export const projects: Project[] = [
     sqft: "6,150 ft²",
     thumb: "/images/projects/inglewood-house/01.jpeg",
     thumbAlt: "Inglewood House — twilight front exterior",
-    placement: { colStart: 8, colSpan: 5, rowOffset: 5 },
+    placement: { colStart: 1, colSpan: 6, band: 3 },
     hasDetail: true,
     description: [
       "Inglewood House is a modern custom home that demonstrates the balance between architecture, functionality, and craftsmanship. The primary design challenge was creating a private backyard while preserving sunlight in a dense residential setting. This was achieved through strategic building placement, expansive glazing, and carefully considered outdoor spaces. A soaring double-height dining area serves as the home's centerpiece, creating a strong visual connection between both floors and enhancing the sense of openness throughout.",
@@ -66,7 +137,7 @@ export const projects: Project[] = [
     sqft: "4,325 ft²",
     thumb: "/images/projects/nelson-house/01.jpeg",
     thumbAlt: "Nelson House — front exterior",
-    placement: { colStart: 3, colSpan: 7, rowOffset: 18 },
+    placement: { colStart: 8, colSpan: 5, band: 3, drop: 42 },
     hasDetail: true,
     description: [
       "This custom contemporary residence marked the beginning of Primal Construction's journey. Designed to embrace its elevated setting, the home was carefully positioned to maximize ocean views while creating seamless connections between indoor and outdoor living.",

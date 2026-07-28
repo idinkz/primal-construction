@@ -3,8 +3,12 @@ export type GridPlacement = {
   colStart: number;
   /** column span in 12-col grid */
   colSpan: number;
-  /** vertical row offset (in row units of ~80px) */
-  rowOffset: number;
+  /** which band the card sits in — bands are content-height, so cards in
+   *  different bands can never collide no matter how wide the viewport gets */
+  band: number;
+  /** downward stagger within the band, as a % of the card's own width, so the
+   *  composition scales proportionally instead of drifting at large widths */
+  drop?: number;
 };
 
 export type ProjectCardData = {
